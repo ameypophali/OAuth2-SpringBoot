@@ -1,0 +1,25 @@
+#Application
+server:
+  port: 9095
+app:
+    name: OAuth2Server
+
+#Hibernate
+hibernate:
+    dialect:
+        storage_engine: InnoDB
+
+#Local MySQL
+spring:
+    datasource:
+        password: pass@123
+        url: jdbc:mysql://localhost:3306/oauth2
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+check-user-scopes: true
